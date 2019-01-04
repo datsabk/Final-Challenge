@@ -1,0 +1,11 @@
+{
+  "name": "finalchallenge",
+  "version": "1.0.0",
+  "description": "This is the development of the final challenge provided by Jumpcut",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abhishek Kothari",
+  "license": "ISC"
+}
