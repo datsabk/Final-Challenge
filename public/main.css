@@ -1,0 +1,33 @@
+.banner{
+background:url('top-render3.jpg');
+background-size:cover;
+height:100vh;
+color:white;
+}
+.space-40{
+    margin-bottom:40px;
+}
+.example{
+    letter-spacing:0.6em;
+    font-size:20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+#rangepanel,#partialpanel{
+display:none;
+border:2px solid white;
+border-radius:15px;
+}
+.rocket{
+    position:fixed;
+    bottom: -1000px;
+    right:35%;
+}
+.output{
+    font-size:32px;
+    padding:40px;
+    position:fixed;
+    right:45%;
+}
+#activated{
+    display:none;
+}
