@@ -3,7 +3,6 @@ function activate(code){
     var genPath = generators[code];
     if(code==0||code==1||code==4){
         $.get(genPath,function(data){
-            alert(data);
             $('#activator').slideUp();
             $('.rocket').animate({
                 top: -1000

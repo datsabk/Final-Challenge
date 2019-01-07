@@ -30,7 +30,6 @@ Mygenerator = function(){
     this.rangeSeq = (start, step) => {
         if (state["rangestart"] != undefined) {
             start = parseInt(state["rangestart"]);
-            console.log('Starting at:'+start+" to step "+step);
             state["rangestart"] = start + step;
         } else {
             state["rangestart"] = start;
