@@ -34,14 +34,20 @@ function activate(code){
     }else if(code==3){
         var values = $('#values').val();
         var data = {valueArr:values.split(",")};
-        $.post(genPath,data,function(data){
-            $('#activator').slideUp();
-            $('.rocket').animate({
-                top: -1000
-            },2000,function(){
-                $('#activated').slideDown();
-            });
-        })
+        $.ajax({
+            type:'POST',
+            url:genPath,
+            data:JSON.stringify(data),
+            success:function(d){
+                $('#activator').slideUp();
+                $('.rocket').animate({
+                    top: -1000
+                },2000,function(){
+                    $('#activated').slideDown();
+                });
+            },
+            contentType: "application/json"
+        });
     }
     
 }

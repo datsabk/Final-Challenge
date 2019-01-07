@@ -15,7 +15,7 @@ app.use(session({
     cookie: {}
 }))
 
-var server = app.listen(3000, function () {
+var server = app.listen(3002, function () {
     console.log('Server listening on port 3000');
 });
 //Route for normal index file
@@ -69,10 +69,9 @@ app.get('/next', function (req, resp) {
     if (req.session.initialValue != undefined) {
         gen = new generator(genFn, parseInt(req.session.initialValue), parseInt(req.session.step));
     } else if (req.session.partialvalues != undefined) {
-
-        gen = new generator(genFn, parseInt(req.session.partialvalues));
+        var partialValues = req.session.partialvalues;
+        gen = new generator(genFn, partialValues);
     } else {
-
         gen = new generator(genFn);
     }
     var nextVal = '';

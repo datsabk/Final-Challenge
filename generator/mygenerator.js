@@ -67,8 +67,8 @@ Mygenerator = function(){
         }
     } // 2,	3, 5, 7, 11, 13, ...
     this.partialSumSeq = function(numbers){
-        var lastSum = state["lastSumSeq"] != undefined ? state["lastSumSeq"] : 0;
-        var nextNum = state["nextNumIndex"] != undefined ? state["nextNumIndex"] : 0;
+        var lastSum = parseInt(state["lastSumSeq"] != undefined ? state["lastSumSeq"] : 0);
+        var nextNum = parseInt(state["nextNumIndex"] != undefined ? state["nextNumIndex"] : 0);
         lastSum += parseInt(numbers[nextNum]);
         nextNum++;
         state["nextNumIndex"] = nextNum;
